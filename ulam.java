@@ -1,4 +1,10 @@
 public class ulam {
+  /*
+   * https://en.wikipedia.org/wiki/Ulam_spiral
+   * this program prints an ulam spiral with 1 in the middle
+   * primes will print and non-primes will be " "
+   */
+
   public static void main(String[] args) {
     int[][] row = spiral(11);
 
