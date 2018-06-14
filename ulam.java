@@ -6,6 +6,7 @@ public class ulam {
    */
 
   public static void main(String[] args) {
+    //should choose odd primes for 1 to be in middle
     int[][] row = spiral(11);
 
     for(int i = 0; i < row.length; i++) {
@@ -19,6 +20,8 @@ public class ulam {
       System.out.print("\n");
     }
   }
+
+  //check if number is prime
   public static boolean isPrime(int num) {
     if(num == 1) {
       return false;
@@ -34,6 +37,7 @@ public class ulam {
     }
   }
 
+  //creates spiral array
   public static int[][] spiral(int input) {
     int[][] row = new int[input][input];
     int i = input * input;
