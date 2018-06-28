@@ -7,11 +7,16 @@ public class ulam {
 
   public static void main(String[] args) {
     //should choose odd primes for 1 to be in middle
-    int[][] row = spiral(11);
+    int[][] row = spiral(66, 11);
+    viewUlam(row, false);
 
-    for(int i = 0; i < row.length; i++) {
-      for(int j = 0; j < row.length; j++) {
-        if(isPrime(row[i][j])) {
+  }
+
+  //views spiral with or without non-primes
+  public static void viewUlam(int[][] row, boolean check) {
+    for (int i = 0; i < row.length; i++) {
+      for (int j = 0; j < row.length; j++) {
+        if (check | isPrime(row[i][j])) {
           System.out.print(row[i][j] + "\t");
         } else {
           System.out.print(" " + "\t");
@@ -38,13 +43,15 @@ public class ulam {
   }
 
   //creates spiral array
-  public static int[][] spiral(int input) {
-    int[][] row = new int[input][input];
-    int i = input * input;
+  //start - what number middle of spiral starts with
+  //size - size of spiral, should be odd square
+  public static int[][] spiral(int start, int size) {
+    int[][] row = new int[size][size];
+    int i = start - 1 + size * size;
     int min = 0;
-    int max = input - 1;
+    int max = size - 1;
 
-    while(i > 0){
+    while(i >= start){
       for(int j = max; j >= min; j--) {
         row[max][j] = i;
         i--;
