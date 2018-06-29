@@ -1,9 +1,5 @@
 public class ulam {
-  /*
-   * https://en.wikipedia.org/wiki/Ulam_spiral
-   * this program prints an ulam spiral with 1 in the middle
-   * primes will print and non-primes will be " "
-   */
+  //https://en.wikipedia.org/wiki/Ulam_spiral
 
   public static void main(String[] args) {
     //should choose odd primes for 1 to be in middle

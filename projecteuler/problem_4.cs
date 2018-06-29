@@ -6,6 +6,11 @@ namespace projecteuler
   {
     public static void Main(string[] args)
     {
+
+    }
+
+    public static bool isPalindrome(int n)
+    {
       
     }
   }
