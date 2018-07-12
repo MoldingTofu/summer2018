@@ -1,0 +1,7 @@
+function computerGuess() {
+
+}
+
+function userGuess() {
+
+}
